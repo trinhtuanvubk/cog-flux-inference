@@ -1004,3 +1004,36 @@ class TestPredictor(Predictor):
 
     def predict(self, how_many: int = Input(description="how many", ge=0)) -> Any:
         return self.num + how_many
+
+
+
+if __name__=="__main__":
+    # Initialize the predictor
+    predictor = SchnellPredictor()
+    predictor.setup()
+
+    # Basic prediction with default parameters
+    output_paths = predictor.predict(
+        prompt="a bird",  # Required
+        aspect_ratio="1:1",        # Optional, default "1:1"
+        num_outputs=1,             # Optional, default 1
+        num_inference_steps=4,     # Optional, default 4 (recommended for Schnell)
+        seed=None,                 # Optional, random if not specified
+        output_format="webp",      # Optional, default "webp"
+        output_quality=80,         # Optional, default 80
+        disable_safety_checker=False, # Optional, default False
+        go_fast=True,             # Optional, default True
+        megapixels="1"            # Optional, default "1"
+    )
+
+    # # Or with more customization
+    # output_paths = predictor.predict(
+    #     prompt="a beautiful landscape with mountains",
+    #     aspect_ratio="16:9",
+    #     num_outputs=2,
+    #     num_inference_steps=4,
+    #     seed=42,
+    #     output_format="png",
+    #     go_fast=True,
+    #     megapixels="1"  # Use "0.25" for smaller images
+    # )
