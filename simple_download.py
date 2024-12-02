@@ -7,22 +7,18 @@ MODEL_PATHS = {
         "url": "https://weights.replicate.delivery/default/official-models/flux/t5/t5-v1_1-xxl.tar",
         "cache": "./model-cache/t5"
     },
-    "clip": {
-        "url": "https://weights.replicate.delivery/default/official-models/flux/clip/clip-vit-large-patch14.tar",
-        "cache": "./model-cache/clip"
-    },
-    "schnell": {
-        "url": "https://weights.replicate.delivery/default/official-models/flux/schnell/schnell.sft",
-        "cache": "./model-cache/schnell/schnell.sft"
-    },
-    "dev": {
-        "url": "https://weights.replicate.delivery/default/official-models/flux/dev/dev.sft",
-        "cache": "./model-cache/dev/dev.sft"
-    },
-    "ae": {
-        "url": "https://weights.replicate.delivery/default/official-models/flux/ae/ae.sft",
-        "cache": "./model-cache/ae/ae.sft"
-    }
+    # "clip": {
+    #     "url": "https://weights.replicate.delivery/default/official-models/flux/clip/clip-vit-large-patch14.tar",
+    #     "cache": "./model-cache/clip"
+    # },
+    # "schnell": {
+    #     "url": "https://weights.replicate.delivery/default/official-models/flux/schnell/schnell.sft",
+    #     "cache": "./model-cache/schnell/schnell.sft"
+    # },
+    # "ae": {
+    #     "url": "https://weights.replicate.delivery/default/official-models/flux/ae/ae.sft",
+    #     "cache": "./model-cache/ae/ae.sft"
+    # }
 }
 
 def download_models():
